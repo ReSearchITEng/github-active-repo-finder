@@ -67,6 +67,12 @@ Last step: make a blog posting and notify everyone that project is getting resur
 
   1. it's slow (if there are hundres/thounsands of forks with lots of branches, it takes hours)
   2. Does not handle branches with non-ascii names (it's more of github api limitation for compare). (Watch for errors like: "parse error: Invalid numeric literal at line 2, column 7")
+  3. MacOS - one needs to first change sed to gsed
+     ```shell
+     brew install gnu-sed
+     sed() { gsed $@ }
+     ./active_forks_finder.sh <params>
+     ```
 
 ## How it's working
 
